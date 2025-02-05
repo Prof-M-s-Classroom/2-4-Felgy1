@@ -30,13 +30,13 @@ public:
 };
 
 // Step 2: Function to modify robot (pass by value)
-void modifyRobotValue(Robot r) {
+void modifyRobotbyValue(Robot r) {
     r.setModel("XE");
     cout<<"Inside function using pass by value."<<r.getModel()<<endl;
 }
 
 // Step 3: Function to modify robot (pass by reference)
-void modifyRobotReference(Robot& r) {
+void modifyRobotbyReference(Robot& r) {
     r.setModel("MO");
     cout<<"Inside function using pass by reference."<<r.getModel()<<endl;
 }
@@ -94,12 +94,12 @@ int main() {
    // cout << "Updated Battery Life (using pointer): " << robotPtr->getBatteryLife() << "%\n";
 
     // Step 7: Pass by value (no change outside function)
-    modifyRobotValue(robot1);
+    modifyRobotbyValue(robot1);
     cout<<"After modify robot by value: " << robot1.getModel()<<endl;
    // cout << "After modifyRobotByValue, Battery Life: " << myRobot.getBatteryLife() << "%\n";
 
     // Step 8: Pass by reference (changes persist)
-    modifyRobotReference(robot1);
+    modifyRobotbyReference(robot1);
     cout<<"After modify robot by reference " << robot1.getModel()<<endl;
    // cout << "After modifyRobotByReference, Battery Life: " << myRobot.getBatteryLife() << "%\n";
 
